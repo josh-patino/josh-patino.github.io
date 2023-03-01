@@ -1,0 +1,19 @@
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin: 1rem 0 .5rem 1rem;
+}
+.container {
+    padding-top: 2rem;
+    margin-bottom: 7rem;
+}
+.row {
+    align-items: center;
+}
+
+.center {
+    display: flex;
+    align-items: center; //vertical alignment
+    justify-content: center; // horizontal alignment 
+  
+}

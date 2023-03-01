@@ -1,0 +1,29 @@
+.image-container {
+    margin: 0rem 1rem 1rem 0rem;
+    //box-shadow: 10px 5px 5px black; // default unless specified in hobbies.component.html
+    
+}
+.container {
+    padding-top: 2rem;
+}
+.text-container {
+    font-size: 1rem;
+    text-align: center;
+}
+.row {
+    align-items: center;
+}
+.col-md-6 {
+    justify-content: center;
+}
+
+h2 {
+    font-size: 2.2rem;
+    text-align: center;
+    margin: 0 0 2rem 0;
+}
+p {
+    text-align: center;
+    padding-top: 1rem;
+    margin:  0 0 0 0;
+}
