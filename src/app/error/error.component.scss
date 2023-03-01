@@ -1,0 +1,24 @@
+p { //. is a class specfier, we dont need it what we are changing is not a class
+    padding-top: 2rem;
+    color: black;
+    text-align: center;
+}
+.error {
+    font-size: 3rem;
+    padding-top: 1rem;
+    color: black;
+}
+.error_cat {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: auto;
+    max-width: 700px;
+    max-height: 600px;
+}
+
+a {
+    text-align: center;
+    color: blue;
+}
