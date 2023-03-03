@@ -12,6 +12,7 @@ const routes: Routes = [
   {path: 'projects', component: ProjectsComponent},
   {path:'hobbies', component: HobbiesComponent},
   {path: 'weather', component: WeatherComponent},
+  {path: 'error', component: ErrorComponent},
   {path: '**', component: ErrorComponent}
 
 
