@@ -11,6 +11,9 @@ import { HobbiesComponent } from './hobbies/hobbies.component';
 import { FooterComponent } from './footer/footer.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { WeatherComponent } from './weather/weather.component';
+import { FormsModule } from '@angular/forms';
+import { DatePipe } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -20,15 +23,19 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     ErrorComponent,
     HobbiesComponent,
     FooterComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    WeatherComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    DatePipe
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
