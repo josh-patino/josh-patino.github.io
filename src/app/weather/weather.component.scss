@@ -1,0 +1,39 @@
+
+td:first-child{
+    text-align: right;
+}
+
+td:last-child {
+    text-align: left;
+}
+
+td {
+    padding: .3rem;
+    color: white;
+}
+
+.card-body {
+    padding: 0.5rem;
+}
+
+table {
+    text-align: center;
+}
+
+.searchButton {
+    margin-top: 100px;
+    text-align: center;
+    
+}
+
+.searchButton input {
+    outline: none;
+    border: none;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    padding: 1em;
+    color: white;
+    font-size: 25;
+    text-align: center;
+}

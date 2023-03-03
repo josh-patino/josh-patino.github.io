@@ -1,0 +1,76 @@
+<div class="searchButton">
+    <form #form="ngForm" (submit)="onSubmit()">
+    <input type = "text" placeholder="Search City" name="city"[(ngModel)]="city" style="background-color: rgb(161, 203, 165);">
+</form>
+</div>
+
+<div class="myContainer" style="text-align: center;">
+    <div class="card text-white mx-auto" style="max-width: 40rem; background-color: #53915e;">
+        <div class="card-header">
+                <h2>{{cityName}}</h2>
+                <img src="{{iconURL}}" alt="weather image">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Current Outlook</h5>
+          <div class="container">
+            <table class="table">
+                <tbody>
+                    <tr>
+                      <td style="width: 50%">Conditions Outside:</td>
+                      <td style="width: 50%">{{summary}}</td>
+                    </tr>
+                  </tbody>
+                <tbody>
+                  <tr>
+                    <td style="width: 50%">Current Temperature:</td>
+                    <td style="width: 50%">°{{temperature}}</td>
+                  </tr>
+                </tbody>
+                <tbody>
+                  <tr>
+                    <td style="width: 50%">Feels like:</td>
+                    <td style="width: 50%">°{{feelsLikeTemp}}</td>
+                  </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                      <td style="width: 50%">Max: °{{maxTemp}}</td>
+                      <td style="width: 50%">Min: °{{minTemp}}</td>
+                    </tr>
+                  </tbody>
+                  <tbody>
+                    <tr>
+                      <td style="width: 50%">Wind Speed:</td>
+                      <td style="width: 50%">{{windSpeed}} MPH</td>
+                    </tr>
+                  </tbody>
+                  <tbody>
+                    <tr>
+                      <td style="width: 50%">Pressure:</td>
+                      <td style="width: 50%">{{pressure}} hPa</td>
+                    </tr>
+                  </tbody>
+                  <tbody>
+                    <tr>
+                      <td style="width: 50%">Humidity:</td>
+                      <td style="width: 50%">{{humidity}}%</td>
+                    </tr>
+                  </tbody>
+                  <tbody>
+                    <tr>
+                      <td style="width: 50%">Sunrise:</td>
+                      <td style="width: 50%">{{sunriseTime}}</td>
+                    </tr>
+                  </tbody>
+                  <tbody>
+                    <tr>
+                      <td style="width: 50%">Sunset:</td>
+                      <td style="width: 50%">{{sunsetTime}}</td>
+                    </tr>
+                  </tbody>
+              </table>
+        </div>
+        </div>
+      </div>
+    
+</div>
