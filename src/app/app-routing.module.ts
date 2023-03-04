@@ -5,14 +5,16 @@ import { ProjectsComponent } from './projects/projects.component';
 import { HobbiesComponent } from './hobbies/hobbies.component';
 import { ErrorComponent } from './error/error.component';
 import { WeatherComponent } from './weather/weather.component';
+import { NasaImageComponent } from './nasa-image/nasa-image.component';
 
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'projects', component: ProjectsComponent},
-  {path:'hobbies', component: HobbiesComponent},
+  {path: 'hobbies', component: HobbiesComponent},
   {path: 'weather', component: WeatherComponent},
   {path: 'error', component: ErrorComponent},
+  {path: 'nasa-image', component:NasaImageComponent},
   {path: '**', component: ErrorComponent}
 
 

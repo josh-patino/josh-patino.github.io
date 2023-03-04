@@ -14,6 +14,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { WeatherComponent } from './weather/weather.component';
 import { FormsModule } from '@angular/forms';
 import { DatePipe } from '@angular/common';
+import { NasaImageComponent } from './nasa-image/nasa-image.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { DatePipe } from '@angular/common';
     HobbiesComponent,
     FooterComponent,
     ProjectsComponent,
-    WeatherComponent
+    WeatherComponent,
+    NasaImageComponent
   ],
   imports: [
     BrowserModule,
