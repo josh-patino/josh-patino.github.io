@@ -1,5 +1,6 @@
 import { Component, OnDestroy } from '@angular/core';
 import { NasaImageService } from '../nasa-image.service';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-nasa-image',
@@ -7,13 +8,15 @@ import { NasaImageService } from '../nasa-image.service';
   styleUrls: ['./nasa-image.component.scss']
 })
 export class NasaImageComponent {
-constructor(private NasaImageService: NasaImageService){}
+constructor(private NasaImageService: NasaImageService, private datePipe: DatePipe){}
 
 nasaData: any; 
-date: string = '';
 nasaExplanation: string = 'loading';
 url: any; 
 nasaTitle: string = '';
+_copyright: string = ''; 
+nasaDate: any = '';
+
 
 ngOnInit(): void {
   this.getNasaData(); 
@@ -27,7 +30,12 @@ private getNasaData(){
       this.nasaData = result; 
       this.nasaTitle = this.nasaData.title; 
       this.nasaExplanation = this.nasaData.explanation; 
-      this.url = this.nasaData.hdurl; 
+      this.url = this.nasaData.url; 
+      this._copyright = this.nasaData.copyright; 
+      const date = this.nasaData.date; 
+      this.nasaDate = this.datePipe.transform(date, 'MMMM d, YYYY');
+      console.log(this.nasaDate); 
+      
     }
   })
 }
