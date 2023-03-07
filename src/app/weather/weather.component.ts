@@ -24,7 +24,7 @@ export class WeatherComponent implements OnInit{
   city: string = 'St. Louis';
   units: string = 'imperial'; 
   sunRiseSeconds: number = 0;
-  sunriseTime: any ='';
+  sunriseTime: any  = 0;
   sunSetSeconds: number = 0;
   sunsetTime: any = '';
   
@@ -36,14 +36,13 @@ export class WeatherComponent implements OnInit{
 
   onSubmit(){
     this.getWeatherData(this.city);
+    console.log(this.city);
     this.city = '';
   }
 
   private getWeatherData(city:string){
     this.weatherService.getWeather(this.city, this.units).subscribe({
       next:(result)=> {
-        console.log(result); 
-        this.myWeather = result; 
         this.myWeather = result; 
         console.log(this.myWeather)
         this.cityName = this.myWeather.name;
@@ -59,7 +58,7 @@ export class WeatherComponent implements OnInit{
         this.maxTemp = Math.round(this.myWeather.main.temp_max); 
         this.sunRiseSeconds = this.myWeather.sys.sunrise;
         this.sunSetSeconds = this.myWeather.sys.sunset;
-        console.log(this.sunRiseSeconds);
+        //console.log(this.sunRiseSeconds);
         //date pip for sunrise, and sunset
         const sunrise = new Date(this.sunRiseSeconds * 1000);
         this.sunriseTime = this.datePipe.transform(sunrise, 'h:mm a');

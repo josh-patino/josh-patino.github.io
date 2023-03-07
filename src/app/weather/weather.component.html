@@ -1,6 +1,6 @@
 <div class="searchButton">
     <form #form="ngForm" (submit)="onSubmit()">
-    <input type = "text" placeholder="Search City" name="city"[(ngModel)]="city" style="background-color: rgb(161, 203, 165);">
+    <input type = "text" placeholder="Search City" name="city"[(ngModel)]="city" style="background-color: rgb(45, 160, 57);">
 </form>
 </div>
 
@@ -8,7 +8,7 @@
     <div class="card text-white mx-auto" style="max-width: 40rem; background-color: #53915e;">
         <div class="card-header">
                 <h2>{{cityName}}</h2>
-                <img src="{{iconURL}}" alt="weather image">
+                <img src="{{iconURL}}" alt="current weather condition image">
         </div>
         <div class="card-body">
           <h5 class="card-title">Current Outlook</h5>

@@ -33,9 +33,7 @@ private getNasaData(){
       this.url = this.nasaData.url; 
       this._copyright = this.nasaData.copyright; 
       const date = this.nasaData.date; 
-      this.nasaDate = this.datePipe.transform(date, 'MMMM d, YYYY');
-      console.log(this.nasaDate); 
-      
+      this.nasaDate = this.datePipe.transform(date, 'MMMM d, YYYY');      
     }
   })
 }
